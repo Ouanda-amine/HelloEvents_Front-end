@@ -1,0 +1,37 @@
+
+<form (ngSubmit)="addEvent()"  >
+
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Event Name</mat-label>
+      <input matInput placeholder="event name" [(ngModel)]="data.eventname" name="evntname">
+      <mat-icon mat-ripple>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p> 
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="discription" [(ngModel)]="data.description" name="desc">
+      <mat-icon mat-card-subtitle>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <mat-label>Select Type</mat-label>
+      <mat-select [(ngModel)]="data.type" name="type">
+        <mat-option value="scolaire">scolaire </mat-option>
+        <mat-option value="familliale">famillial </mat-option>
+        <mat-option value="party ">party </mat-option>
+
+
+      </mat-select>
+      <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+    </mat-form-field>
+  </p>
+
+  <button mat-button="elevated" type="submit">ADD</button>
+</form>
+

@@ -14,7 +14,7 @@ export class EventService {
   }
 
   addEvent(data : any): Observable<any> {
-    return this.http.post("http://localhost:8080/api/v1/add",data)
+    return this.http.post("http://localhost:8080/api/v1/addEvent",data)
   }
 
   getEventById(id : number): Observable<any> {

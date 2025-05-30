@@ -1,0 +1,25 @@
+<form (ngSubmit)="addClient()" class="client-form">
+  <h2>Ajouter un Client</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Prénom</mat-label>
+    <input matInput placeholder="Entrez le prénom" [(ngModel)]="data.firstName" name="firstName" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nom</mat-label>
+    <input matInput placeholder="Entrez le nom" [(ngModel)]="data.lastName" name="lastName" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" placeholder="Entrez l'email" [(ngModel)]="data.email" name="email" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput type="password" placeholder="Entrez le mot de passe" [(ngModel)]="data.password" name="password" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Ajouter</button>
+</form>
